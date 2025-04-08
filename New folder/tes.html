@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Destinasi Liburan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f0f2;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #d5006d;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: auto;
+            width: 300px;
+        }
+        button {
+            background-color: #d5006d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #b0004d;
+        }
+        #thankYouMessage {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #d5006d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Pilih Destinasi Liburan</h1>
+        <p>Ke mana Anda ingin pergi?</p>
+        <button onclick="showMessage('IKN')">IKN (Ibu Kota Negara)</button>
+        <button onclick="showMessage('Pantai')">Pantai</button>
+        <p id="thankYouMessage"></p>
+    </div>
+
+    <script>
+        function showMessage(destination) {
+            const message = document.getElementById('thankYouMessage');
+            message.innerText = `Terima kasih telah memilih liburan ke ${destination}!`;
+            message.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
